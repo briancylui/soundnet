@@ -8,7 +8,7 @@ require 'cudnn'
 -- to specify these at runtime, you can do, e.g.:
 --    $ lr=0.001 th main.lua
 opt = {
-  dataset = 'audio_labeled',   -- indicates what dataset load to use (in data.lua)
+  dataset = 'moments',   -- indicates what dataset load to use (in data.lua)
   nThreads = 16,        -- how many threads to pre-fetch data
   batchSize = 256,      -- self-explanatory
   loadSize = 22050*5,       -- when loading images, resize first to this size
@@ -28,8 +28,8 @@ opt = {
   randomize = 1,        -- whether to shuffle the data file or not
   display_port = 8001,  -- port to push graphs
   display_id = 1,       -- window ID when pushing graphs
-  data_root = '/data/vision/torralba/crossmodal/soundnet/ESC-50',
-  data_list = '/data/vision/torralba/crossmodal/soundnet/ESC-50/splits/train1.txt',
+  data_root = './',
+  data_list = 'dataset.txt',
 }
 
 -- one-line argument parser. parses enviroment variables to override the defaults
